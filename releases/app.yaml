@@ -1,0 +1,13 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: ovms-arc-sample
+  namespace: ovms
+spec:
+  releaseName: ovms-arc-demo
+  chart:
+    git: https://github.com/amahab/openvino-demo
+    ref: master
+    path: charts/ovms
+  values:
+    serviceName: ovms-arc-demo
